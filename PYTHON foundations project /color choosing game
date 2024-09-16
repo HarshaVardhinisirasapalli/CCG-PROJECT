@@ -1,0 +1,101 @@
+# COLOR CHOICE GAME  USING ONLY CONDITIONAL STATEMENTS AND LOOPING STATEMENTS
+
+# IMPORTING REQUIRED MODULES
+import random
+
+# defining the winning rules of the game:
+print(" To win in thi game you must match with the computer's choice")
+
+# initializing scores:
+player_score = 0
+computer_score = 0
+
+# forming main while loop and second while loop:
+while True:
+    print(" Red = 1 \n Yellow = 2 \n Green = 3 \n Blue = 4 \n Orange = 5")
+    player_choice = int(input("user turn..:"))
+    
+    while player_choice > 5 and player_choice < 1:
+        print(" enter valid input:")
+        
+        
+        
+    if player_choice == 1:
+        player_color = "red"
+    elif player_choice == 2:
+        player_color = "yellow"
+    elif player_choice == 3:
+        player_color = "green"
+    elif player_choice == 2:
+        player_color = "blue"
+    else:
+        player_color =" orange"
+        
+    
+    print("The players choice is"+ player_color)
+# making the computer's choice:
+    
+    print(" It is computer's choice")
+    computer_choice = random.randint(1,5)
+    
+    
+    while computer_choice == player_choice:
+        computer_choice = random.randint(1,5)
+ 
+
+
+    if computer_choice == 1:
+        computer_color="red"
+    elif computer_choice == 2:
+        computer_color="yellow"
+    elif computer_choice == 3:
+        computer_color="green" 
+    elif computer_choice == 4:
+        computer_color="blue"
+    else:
+        computer_color="orange"
+        
+# printing computers choice color:    
+    print("The computer choice color is:" + computer_color )
+    
+    
+#  making the decision:
+
+    if computer_choice == player_choice:
+        player_score += 1
+        print(" the player won the game")
+        print(" Do you want to play again? (y/n)")
+    else:
+        computer_score += 1
+        
+        
+ # printing the scores:       
+        print("player's score is:" + str(player_score))
+        print("computer's score is:"+ str (computer_score))
+        print(" Do you want to play again? (y/n)")
+        answer = input()
+        
+        
+        
+# asking for replay:
+
+    if answer == 'n' or answer == 'N':
+        break
+        
+        
+if computer_score == player_score:
+    print("THE GAME IS TIED")
+    print("Thanks for playing")
+elif computer_score < player_score:
+    print("The player won")
+    print("The user won  \n Thanks for playing")
+else:
+    print(" The Computer Won")
+    print(" Thanks for Playing")       
+            
+        
+        
+        
+        
+        
+        
